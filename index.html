@@ -46,3 +46,4 @@ document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>selectTab(b.dat
 $('close-dialog').onclick=()=>$('help-dialog').close();$('help-dialog').addEventListener('click',e=>{if(e.target===$('help-dialog')){const r=$('help-dialog').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('help-dialog').close()}});
 $('faq-list').innerHTML=faqs.map(f=>`<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('');document.querySelectorAll('.check input').forEach(c=>c.addEventListener('change',()=>{$('doc-count').textContent=document.querySelectorAll('.check input:checked').length+' / 5 준비'}));$('print').onclick=()=>window.print();render();
 </script></body></html>
+
